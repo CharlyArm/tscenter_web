@@ -1,0 +1,3 @@
+<div class="container_loader">
+    <div class="loader"></div>
+</div>
