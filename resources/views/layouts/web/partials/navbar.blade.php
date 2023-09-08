@@ -12,8 +12,8 @@
                     <img src="{{ asset('img/logo.png') }}" width="140" alt="Logo">
                 </a>
 
-                <!-- Separador -->
-                <hr class="my-0 mx-2 vertical-divider">
+                <!-- Separador (oculto en dispositivos móviles) -->
+                <hr class="my-0 mx-2 vertical-divider d-none d-md-block">
 
                 <!-- Icono de geolocalización como enlace (oculto en dispositivos móviles) -->
                 <!-- Icono de geolocalización como enlace (visible en dispositivos de escritorio) -->

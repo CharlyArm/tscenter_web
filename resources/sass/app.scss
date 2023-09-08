@@ -90,6 +90,46 @@
     }
 }
 
+/* Estilos navbar offcanvas */
+/* Cambiar el color de fondo del offcanvas */
+.offcanvas-body {
+    background-color: #f8f9fa;
+    /* Color de fondo más claro */
+}
+
+/* Cambiar el color del texto en el offcanvas */
+.offcanvas-body a {
+    color: #333;
+    /* Color de texto más oscuro */
+}
+
+/* Cambiar el color de fondo de los botones de cierre y geolocalización */
+.btn-close,
+.btn-geolocation {
+    background-color: #DC3545;
+    border-color: #DC3545;
+}
+
+/* Cambiar el color del icono de geolocalización */
+.btn-geolocation i {
+    color: #fff;
+}
+
+/* Cambiar el color del botón de búsqueda */
+.input-group button[type="button"] {
+    background-color: #DC3545;
+    border-color: #DC3545;
+    color: #fff;
+}
+
+/* Reducir el ancho del offcanvas en dispositivos no móviles */
+@media (min-width: 768px) {
+    .offcanvas-start {
+        max-width: 300px;
+        /* Ajusta el ancho según tus preferencias */
+    }
+}
+
 /* Divisor vertical */
 .vertical-divider {
     border: none;
@@ -104,12 +144,104 @@ main {
     padding-top: 5.5rem;
 }
 
+/* Margen main */
 .content_container {
     margin-left: 20px;
     margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
+/* Estilos card hero carrusel y card hero1*/
+/* Estilos para las diapositivas del carrusel */
+.carousel-item {
+    position: relative;
+    height: 395px;
+    /* Altura en pantallas más grandes */
+}
+
+/* Estilo de fondo oscuro con opacidad */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.400);
+    /* Opacidad del fondo */
+    z-index: 1;
+}
+
+/* Estilos de diapositivas */
+.carousel-caption {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.400);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+    z-index: 2;
+}
+
+/* Estilos para las imágenes en las diapositivas */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Utiliza object-fit: cover para que las imágenes se ajusten al contenedor sin distorsión */
+}
+
+/* Ocultar los números y mostrar solo los íconos en los indicadores del carrusel */
+.carousel-indicators li {
+    font-size: 0;
+    /* Oculta los números ajustando el tamaño de fuente a 0 */
+}
+
+.carousel-indicators li::before {
+    content: "\f111";
+    /* Reemplaza esto con el icono que desees utilizando el código Unicode del icono */
+    font-family: FontAwesome;
+    /* Asegúrate de tener FontAwesome incluido en tu proyecto */
+    display: inline-block;
+    /* Muestra el ícono como un elemento en línea */
+    font-size: 24px;
+    /* Tamaño del ícono */
+    color: #000;
+    /* Color del ícono */
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: auto;
+        /* Ajusta automáticamente la altura en pantallas pequeñas */
+    }
+}
+
+.card-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/img/card-hero1.png');
+    background-size: cover;
+    /* Ajusta el tamaño para cubrir toda la tarjeta */
+    background-position: center;
+    /* Centra la imagen */
+    filter: brightness(50%);
+    /* Cambia el valor (50%) para ajustar la oscuridad */
+}
+
+/* Estilo para la tarjeta personalizada */
+.custom-card {
+    /* Anula la altura heredada en dispositivos medianos */
+    height: auto !important;
+}
+
 
 /* Estilos card servicios */
 .card .position-relative {
@@ -140,6 +272,12 @@ main {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.card-img-top {
+    width: 100%; /* Establece un ancho del 100% para que la imagen se ajuste al contenedor */
+    height: 300px; /* Establece una altura fija para todas las imágenes, ajusta según sea necesario */
+    object-fit: cover; /* Ajusta la forma en que se ajusta la imagen al tamaño del contenedor */
 }
 
 /* Estilos para los botones fijos llamada y whatsapp */
