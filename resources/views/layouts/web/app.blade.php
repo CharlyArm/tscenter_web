@@ -19,9 +19,7 @@
     <!--/ Header -->
 
     <!-- Content -->
-    <main>
-        @yield('content')
-    </main>
+    @yield('content')
     <!--/ Content -->
 
     <!-- Footer -->

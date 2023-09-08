@@ -12,3 +12,25 @@
 <button id="scrollToTopButton" class="scroll-to-top-button">
     <i class="fas fa-chevron-up"></i>
 </button>
+
+<footer class="bg-dark text-white py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <!-- Iconos de redes sociales -->
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>                
+            </div>
+            <div class="col-md-4 text-center">
+                <!-- Botón de Play Store -->
+                <a href="https://play.google.com/store" class="btn btn-danger">Descargar en Play Store</a>
+            </div>
+            <div class="col-md-4 text-center">
+                <!-- Texto de copyright -->
+                <p>&copy; 2023 tscenter.com.co.  All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+

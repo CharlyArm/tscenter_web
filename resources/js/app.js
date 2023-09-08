@@ -28,3 +28,19 @@ scrollToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// Funsion ver contraseña
+const passwordInput = document.getElementById('password');
+const passwordToggleIcon = document.querySelector('.password-toggle-icon');
+
+passwordToggleIcon.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordToggleIcon.classList.remove('hide-password');
+        passwordToggleIcon.classList.add('show-password');
+    } else {
+        passwordInput.type = 'password';
+        passwordToggleIcon.classList.remove('show-password');
+        passwordToggleIcon.classList.add('hide-password');
+    }
+});
