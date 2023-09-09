@@ -38,7 +38,7 @@
             <div class="d-flex align-items-center">
                 <!-- Icono de campana -->
                 <a href="" class="text-danger ml-2">
-                    <i class="fa-regular fa-bell fa-lg"></i>
+                    <i class="fas fa-gift fa-lg"></i>
                 </a>
 
                 <!-- Separador -->
@@ -59,10 +59,11 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a href="{{ route('home') }}" class="dropdown-item">Panel</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Cerrar sesión') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -88,10 +89,11 @@
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
                 <!-- Este formulario se mostrará solo en dispositivos móviles -->
                 <form class="d-block d-md-none mb-2" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Encuentralo facil..."
+                        <input type="text" class="form-control" placeholder="Encuentralo fácil..."
                             aria-label="Search">
                         <button class="btn btn-outline-danger" type="button">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -105,10 +107,37 @@
                     Geolocalización
                 </a>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('web.home') }}">Inicio</a>
+                <div class="d-flex align-items-center justify-content-center">
+                    <!-- Botón de Ingreso -->
+                    <a href="{{ route('login') }}" class="custom-btn-offcanvas me-2">
+                        <i class="fa-solid fa-circle-user"></i> Ingreso
+                    </a>
+                
+                    <!-- Botón de Registro -->
+                    <a href="{{ route('register') }}" class="custom-btn-offcanvas">
+                        <i class="fa-solid fa-user-plus"></i> Registro
+                    </a>
+                </div>
+
+                <!-- Título "SECCIONES" con clases de Bootstrap -->
+                <li class="nav-item mt-2">
+                    <h6 class="navbar-text text-uppercase fw-bold text-dark">SECCIONES</h6>
+                    <hr class="horizontal-divider">
                 </li>
+
+                <!-- Enlace "Inicio" -->
+                <li class="nav-item">
+                    <a class="nav-link fs-5 text-danger" href="{{ route('web.home') }}">
+                        <span class="link-text">Inicio</span>
+                        <span class="icon">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>
+
+
 </header>

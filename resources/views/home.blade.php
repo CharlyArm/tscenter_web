@@ -1,5 +1,7 @@
 @extends('layouts.web.app')
 
+@section('title', 'Panel')
+
 @section('content')
     <main>
         <div class="container">

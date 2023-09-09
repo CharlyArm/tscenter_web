@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title') - Technical Support Center</title>
+    <title>@yield('title') - TSCenter</title>
     @include('layouts.web.partials.styles')
 </head>
 

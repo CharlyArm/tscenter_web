@@ -23,6 +23,13 @@
     /* Añade más propiedades según sea necesario para restablecer otros estilos */
 }
 
+/* Cambiando estilos bootstrap 5.2 */
+.btn:hover {
+    background-color: #dc3545; /* Cambia el color de fondo al hacer hover */
+    color: #fff; /* Cambia el color del texto al hacer hover */
+    transition: background-color 0.3s, color 0.3s; /* Agrega una transición suave */
+}
+
 /* Precargador */
 .container_loader {
     background-color: #f3f3f3;
@@ -90,6 +97,31 @@
     }
 }
 
+/* Estilos para la barra de desplazamiento */
+/* Cambia el color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+/* Cambia el color del riel de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Color de fondo del riel */
+}
+
+/* Cambia el color del pulgar de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color del pulgar */
+}
+
+/* Cambia el color del pulgar de la barra de desplazamiento cuando se pasa el mouse sobre él */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Color del pulgar al pasar el mouse */
+}
+
 /* Estilos navbar offcanvas */
 /* Cambiar el color de fondo del offcanvas */
 .offcanvas-body {
@@ -101,6 +133,76 @@
 .offcanvas-body a {
     color: #333;
     /* Color de texto más oscuro */
+}
+
+  /* Estilos para los botones de ingreso y registro */
+  .custom-btn-offcanvas {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #dc3545; /* Borde más delgado */
+    border-radius: 10px; /* Redondeo más sutil */
+    color: #dc3545;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    text-transform: none; /* Texto en minúsculas */
+}
+
+.custom-btn-offcanvas:hover {
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+}
+
+.custom-btn-offcanvas i {
+    margin-right: 5px;
+}
+
+/* Estilo para el enlace */
+.nav-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    /* Elimina el subrayado predeterminado */
+    padding: 10px 15px;
+    /* Añade relleno para crear un área más grande */
+    transition: background-color 0.3s ease;
+    /* Agrega una transición para el cambio de fondo */
+}
+
+/* Estilo para el texto del enlace */
+.link-text {
+    margin-right: 10px;
+    /* Espacio entre el texto y el icono */
+    color: #333;
+    /* Color del texto por defecto */
+}
+
+/* Estilo para el icono */
+.icon {
+    font-size: 1.2rem;
+    /* Tamaño del icono */
+    color: #333;
+    /* Color del icono por defecto */
+}
+
+/* Efecto hover */
+.nav-item a:hover {
+    background-color: #DC3545;
+    /* Cambia el color de fondo en hover */
+}
+
+.nav-item a:hover .link-text {
+    color: #FFFFFF;
+    /* Cambia el color del texto en hover */
+}
+
+.nav-item a:hover .icon {
+    color: #FFFFFF;
+    /* Cambia el color del icono en hover */
 }
 
 /* Cambiar el color de fondo de los botones de cierre y geolocalización */
@@ -130,7 +232,7 @@
     }
 }
 
-/* Divisor vertical */
+/* Divisor vertical navbar */
 .vertical-divider {
     border: none;
     border-left: 2px solid #ccc;
@@ -139,11 +241,19 @@
     /* Altura del separador (ajusta según tus necesidades) */
 }
 
+/* Divisor horizontal pages */
+.horizontal-divider {
+    border-top: 1px solid #afadad;
+    margin-top: 5px;
+}
+
 /* Margen navbar fijo */
 main {
     padding-top: 5.5rem;
-    min-height: 89.1vh; /* Asegura que el cuerpo de la página tenga al menos el alto de la ventana gráfica */
-    position: relative; /* Asegura que el footer fijo esté relacionado con el cuerpo */
+    min-height: 89.1vh;
+    /* Asegura que el cuerpo de la página tenga al menos el alto de la ventana gráfica */
+    position: relative;
+    /* Asegura que el footer fijo esté relacionado con el cuerpo */
 }
 
 /* Margen main */
@@ -277,9 +387,12 @@ main {
 }
 
 .card-img-top {
-    width: 100%; /* Establece un ancho del 100% para que la imagen se ajuste al contenedor */
-    height: 300px; /* Establece una altura fija para todas las imágenes, ajusta según sea necesario */
-    object-fit: cover; /* Ajusta la forma en que se ajusta la imagen al tamaño del contenedor */
+    width: 100%;
+    /* Establece un ancho del 100% para que la imagen se ajuste al contenedor */
+    height: 300px;
+    /* Establece una altura fija para todas las imágenes, ajusta según sea necesario */
+    object-fit: cover;
+    /* Ajusta la forma en que se ajusta la imagen al tamaño del contenedor */
 }
 
 /* Estilos para los botones fijos llamada y whatsapp */
@@ -341,12 +454,14 @@ main {
 }
 
 /* Estilo pagina login */
-.main-login {
+.main-auth {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://lg-repairs.com/wp-content/uploads/2021/08/lg-appliance-repair-lg-repairs.jpg'); /* Ruta de la imagen de fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://lg-repairs.com/wp-content/uploads/2021/08/lg-appliance-repair-lg-repairs.jpg');
+    /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Para que la imagen de fondo permanezca fija */
+    background-attachment: fixed;
+    /* Para que la imagen de fondo permanezca fija */
 }
 
 /* Estilo login card */
@@ -382,28 +497,31 @@ main {
     font-size: 14px;
 }
 
-.divider {
-    border-top: 1px solid #afadad;
-    margin-top: 10px;
+/* Estilo register card */
+.register-container {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
 }
 
-/* Estilos CSS previamente definidos */
-
-/* Estilos para el ícono del ojo */
-.password-toggle-icon {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
+.register-container h2 {
+    margin-bottom: 20px;
 }
 
-.password-toggle-icon.hide-password::before {
-    content: "\f070";
-    /* Ícono del ojo tachado (no visible) */
+.register-container .form-control {
+    border-radius: 10px;
 }
 
-.password-toggle-icon.show-password::before {
-    content: "\f06e";
-    /* Ícono del ojo abierto (visible) */
+.register-container .btn-primary {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 10px;
+}
+
+.register-container .btn-primary:hover {
+    background-color: #0056b3;
 }
