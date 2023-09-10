@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title') - TSCenter</title>
+    <title>
+        @yield('title') - TSCenter Colombia - Cuidando tus Electrodomésticos con Pasión y Compromiso
+    </title>
+
     @include('layouts.web.partials.styles')
 </head>
 

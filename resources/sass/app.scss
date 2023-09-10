@@ -25,9 +25,12 @@
 
 /* Cambiando estilos bootstrap 5.2 */
 .btn:hover {
-    background-color: #dc3545; /* Cambia el color de fondo al hacer hover */
-    color: #fff; /* Cambia el color del texto al hacer hover */
-    transition: background-color 0.3s, color 0.3s; /* Agrega una transición suave */
+    background-color: #dc3545;
+    /* Cambia el color de fondo al hacer hover */
+    color: #fff;
+    /* Cambia el color del texto al hacer hover */
+    transition: background-color 0.3s, color 0.3s;
+    /* Agrega una transición suave */
 }
 
 /* Precargador */
@@ -135,19 +138,20 @@
     /* Color de texto más oscuro */
 }
 
-  /* Estilos para los botones de ingreso y registro */
-  .custom-btn-offcanvas {
+/* Estilos para los botones de ingreso y registro */
+.custom-btn-offcanvas {
     display: inline-block;
     padding: 8px 16px;
     font-size: 14px;
     text-align: center;
-    border: 1px solid #dc3545; /* Borde más delgado */
-    border-radius: 10px; /* Redondeo más sutil */
+    border: 1px solid #dc3545;
+    /* Borde muy fino */
+    border-radius: 10px;
     color: #dc3545;
     background-color: #fff;
     transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
-    text-transform: none; /* Texto en minúsculas */
+    text-transform: none;
 }
 
 .custom-btn-offcanvas:hover {
@@ -160,6 +164,49 @@
     margin-right: 5px;
 }
 
+.user-information {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    /* Fondo blanco */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+.user-avatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.user-greeting {
+    font-size: 16px;
+    color: #333;
+    /* Color de texto principal */
+}
+
+.notification-icon {
+    margin-left: 10px;
+    fill: #FF9532;
+    /* Color del icono de notificación */
+    cursor: pointer;
+}
+
+.notification-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
 /* Estilo para el enlace */
 .nav-item a {
     display: flex;
@@ -167,7 +214,7 @@
     align-items: center;
     text-decoration: none;
     /* Elimina el subrayado predeterminado */
-    padding: 10px 15px;
+    padding: 10px 10px;
     /* Añade relleno para crear un área más grande */
     transition: background-color 0.3s ease;
     /* Agrega una transición para el cambio de fondo */

@@ -55,11 +55,11 @@
                     <div class="dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}
+                            <img src="https://www.gravatar.com/avatar/{{ md5(Auth::user()->email) }}?s=24" alt="{{ Auth::user()->name }}" class="rounded-circle">
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a href="{{ route('home') }}" class="dropdown-item">Panel</a>
+                            <a href="{{ route('admin.dashboard') }}" class="dropdown-item">Panel</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
@@ -71,7 +71,6 @@
                             </form>
                         </div>
                     </div>
-
                 @endguest
             </div>
 
@@ -107,17 +106,41 @@
                     Geolocalización
                 </a>
 
-                <div class="d-flex align-items-center justify-content-center">
-                    <!-- Botón de Ingreso -->
-                    <a href="{{ route('login') }}" class="custom-btn-offcanvas me-2">
-                        <i class="fa-solid fa-circle-user"></i> Ingreso
-                    </a>
+                @guest
+                    <div class="d-flex align-items-center justify-content-center">
+                        @if (Route::has('login'))
+                            <!-- Botón de Ingreso -->
+                            <a href="{{ route('login') }}" class="custom-btn-offcanvas me-2">
+                                <i class="fa-solid fa-circle-user"></i> Ingreso
+                            </a>
+                        @endif
+
+                        @if (Route::has('register'))
+                            <!-- Botón de Registro -->
+                            <a href="{{ route('register') }}" class="custom-btn-offcanvas">
+                                <i class="fa-solid fa-user-plus"></i> Registro
+                            </a>
+                        @endif
+                    </div>
+                @else
+                <div data-qa="user-information" class="user-information">
+                    <div class="user-avatar">
+                        <!-- Imagen de perfil del usuario -->
+                        <img src="https://www.gravatar.com/avatar/{{ md5(Auth::user()->email) }}?s=32" alt="{{ Auth::user()->name }}" class="rounded-circle">
+                    </div>
+                    <div class="user-details">
+                        <!-- Saludo personalizado -->
+                        <span class="user-greeting"><b>Hola</b>, {{ Auth::user()->name }}</span>
+                        <!-- Icono de notificación -->
+                        <div class="notification-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path fill="#FF9532" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.23 15.39L12 15.45l-3.22 1.94a.502.502 0 01-.75-.54l.85-3.66-2.83-2.45a.505.505 0 01.29-.88l3.74-.32 1.46-3.45c.17-.41.75-.41.92 0l1.46 3.44 3.74.32a.5.5 0 01.28.88l-2.83 2.45.85 3.67c.10.43-.36.77-.74.54z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>                
                 
-                    <!-- Botón de Registro -->
-                    <a href="{{ route('register') }}" class="custom-btn-offcanvas">
-                        <i class="fa-solid fa-user-plus"></i> Registro
-                    </a>
-                </div>
+                @endguest
 
                 <!-- Título "SECCIONES" con clases de Bootstrap -->
                 <li class="nav-item mt-2">
@@ -134,7 +157,6 @@
                         </span>
                     </a>
                 </li>
-
             </ul>
         </div>
     </div>
